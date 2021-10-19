@@ -4,10 +4,10 @@
 #include "Container.h"
 
 using namespace std;
+
 int main(int argc, char* argv[])
 {
-	if (argc != 3) 
-	{
+	if (argc != 3) {
 		cout << "incorrect command line! Waited: command in_file out_file" << endl;
 		exit(1);
 	}
@@ -18,6 +18,14 @@ int main(int argc, char* argv[])
 	c.In(ifst);
 	ofst << "Filled container. " << endl;
 	c.Out(ofst);
+
+	ofst << endl << endl << "Sorted container. " << endl;
+	c.Sort();
+	c.Out(ofst);
+
+	ofst << endl << endl;
+	c.OutProc(ofst); //Only Procedural
+
 	c.Clear();
 	ofst << "Empty container. " << endl;
 	c.Out(ofst);
