@@ -17,6 +17,7 @@ void ObjectOriented::InData(ifstream &ifst)
 	}
 	InCommon(ifst);
 };
+
 void ObjectOriented::Out(ofstream &ofst)
 {
 	if (mInher == 0)
@@ -35,8 +36,6 @@ void ObjectOriented::Out(ofstream &ofst)
 		ofst << "Incorrect type of language." << endl;
 		return;
 	}
-
-	ofst << endl;
 	OutCommon(ofst);
 
 };
