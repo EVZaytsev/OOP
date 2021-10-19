@@ -1,11 +1,6 @@
 #pragma once
 #include "Language.h"
-<<<<<<< HEAD
-class ObjectOriented : public Language
-{
-=======
 class ObjectOriented : public Language {
->>>>>>> 2_3
 public:
 
 	enum inheritance {

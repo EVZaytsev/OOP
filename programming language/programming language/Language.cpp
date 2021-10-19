@@ -16,22 +16,20 @@ Language* Language::In(ifstream& ifst)
 	case 1:
 		lg = new Procedural();
 		break;
+
 	case 2:
 		lg = new ObjectOriented();
 		break;
+
 	case 3:
 		lg = new Functional();
 		break;
+
 	default:
 		char b;
 		ifst >> b;
 		//читатем до конца строки
-<<<<<<< HEAD
-		while (!ifst.eof() && ifst.peek() != '\n')
-		{
-=======
 		while (!ifst.eof() && ifst.peek() != '\n') {
->>>>>>> 2_3
 			ifst >> b;
 		}
 		return NULL;
@@ -40,25 +38,14 @@ Language* Language::In(ifstream& ifst)
 	return lg;
 };
 
-<<<<<<< HEAD
-void Language::InCommon(ifstream& ifst)
-=======
 void Language::InCommon(ifstream& ifst) {
 	ifst >> mData >> mRef;
 };
 void Language::OutCommon(ofstream& ofst)
->>>>>>> 2_3
 {
 	ofst << "\nYear of programming language: " << mData << endl;
 	ofst << "Number of mentions of the language on the Internet: " << mRef << endl;
 };
-<<<<<<< HEAD
-void Language::OutCommon(ofstream& ofst)
-{
-	ofst << "\nYear of programming language: " << mData << endl;
-};
-=======
->>>>>>> 2_3
 int Language::YearsPassed()
 {
 	time_t seconds = time(NULL);
@@ -71,4 +58,3 @@ bool Language::Compare(Language& second)
 	return YearsPassed() < second.YearsPassed();
 
 }
-

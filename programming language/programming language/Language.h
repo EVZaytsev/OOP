@@ -4,6 +4,7 @@ using namespace std;
 class Language
 {
 public:
+
 	static Language* In(ifstream& ifst);
 
 	virtual void InData(ifstream& ifst) = 0; // ввод
@@ -15,17 +16,12 @@ public:
 	void InCommon(ifstream& ifst);
 	void OutCommon(ofstream& ofst);
 
-<<<<<<< HEAD
-	short int GetmData() { return mData; }
-	int GetmRef() { return mRef; }
-=======
 	short int GetmData() { 
 		return mData; 
 	}
 	int GetmRef() { 
 		return mRef; 
 	}
->>>>>>> 2_3
 
 	void SetmData(short int mData) { this->mData = mData; }
 	void SetmRef(int mRef) { this->mRef = mRef; }
